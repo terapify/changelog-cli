@@ -49,9 +49,9 @@ const createHandler = action => async ({ message, path, group, verbose, versioni
 
     if(versioning){
       path = resolve(path, '.changelog')
-      if(!fs.existsSync(path)) fs.mkdirSync(path)
       fileName = (await getBranch()).replace(/\//g, '-')
-      await createChangelog({dir: path, fileName})
+      if(!fs.existsSync(path)) fs.mkdirSync(path)
+      if(!fs.existsSync(resolve(path, `${fileName}.md`))) await createChangelog({dir: path, fileName})
     }
 
     const file = await toVFile.read(resolve(path, `${fileName}.md`))
