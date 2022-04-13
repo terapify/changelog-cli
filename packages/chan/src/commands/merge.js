@@ -3,12 +3,12 @@ import { resolve } from 'path'
 import toVFile from 'to-vfile'
 import fs from 'fs'
 
-import { getMarkdownRelease, addChanges } from '@geut/chan-core'
+import { getMarkdownRelease, addChanges } from '@chrisft25/chan-core'
 import { createLogger, hasWarnings } from '../logger.js'
 import { write } from '../vfs.js'
 
 export const command = 'merge'
-export const description = 'Create a new release on your CHANGELOG.md.'
+export const description = 'Merge files from versioned changelogs.'
 
 export const builder = {}
 
@@ -17,7 +17,7 @@ export async function handler ({
   stdout,
   path = '.'
 }) {
-  const { report, success, info, warn, error } = createLogger({ scope: 'release', verbose, stdout })
+  const { report, success, info, warn, error } = createLogger({ scope: 'merge', verbose, stdout })
 
   try {
 
@@ -30,7 +30,9 @@ export async function handler ({
       const dir = resolve(hiddenFolder, file)
       const path = await toVFile.read(dir)
       const tree = getMarkdownRelease(path, { version: 'unreleased' }, stdout = false)
+      console.log(tree)
       tree.children.map(action=>{
+        console.log(action)
         action.children[0].children[0].children.map(e=>changes.push({action: action.name.toLowerCase(), value:e.value}))
       })
       fs.unlinkSync(dir)

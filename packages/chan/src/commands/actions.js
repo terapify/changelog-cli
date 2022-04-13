@@ -2,7 +2,7 @@ import toVFile from 'to-vfile'
 import { resolve } from 'path'
 import fs from 'fs'
 
-import { addChanges } from '@geut/chan-core'
+import { addChanges } from '@chrisft25/chan-core'
 
 import { createLogger } from '../logger.js'
 import { openInEditor } from '../open-in-editor.js'

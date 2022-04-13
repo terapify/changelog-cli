@@ -1,6 +1,6 @@
 {
-  "name": "@geut/chan",
-  "version": "3.2.6",
+  "name": "@chrisft25/chan-versioning",
+  "version": "3.3.0",
   "description": "Write and maintain a CHANGELOG from your command line.",
   "homepage": "http://geutstudio.com",
   "type": "module",
@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@actions/github": "^5.0.0",
-    "@geut/chan-core": "^3.2.6",
+    "@chrisft25/chan-core": "^3.2.6",
     "@geut/git-url-parse": "^3.2.6",
     "boxen": "^5.0.1",
     "editor": "^1.0.0",
@@ -49,11 +49,11 @@
     ]
   },
   "author": {
-    "name": "GEUT",
-    "email": "contact@geutstudio.com"
+    "name": "Chris",
+    "email": "hello@chrisfuentes.me"
   },
   "license": "ISC",
-  "repository": "https://github.com/geut/chan/tree/master/packages/chan",
+  "repository": "https://github.com/chrisft25/chan",
   "publishConfig": {
     "access": "public"
   }

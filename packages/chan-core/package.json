@@ -1,5 +1,5 @@
 {
-  "name": "@geut/chan-core",
+  "name": "@chrisft25/chan-core",
   "version": "3.2.6",
   "description": "API and transformers to work with chast",
   "type": "module",
@@ -49,7 +49,7 @@
     "email": "contact@geutstudio.com"
   },
   "license": "ISC",
-  "repository": "https://github.com/geut/chan/tree/master/packages/chan-core",
+  "repository": "https://github.com/chrisft25/chan/tree/master/packages/chan-core",
   "publishConfig": {
     "access": "public"
   }

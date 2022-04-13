@@ -3,7 +3,7 @@ import { resolve } from 'path'
 import toVFile from 'to-vfile'
 import semver from 'semver'
 
-import { addRelease } from '@geut/chan-core'
+import { addRelease } from '@chrisft25/chan-core'
 import { gitUrlParse } from '@geut/git-url-parse'
 
 import { createLogger, hasWarnings } from '../logger.js'
