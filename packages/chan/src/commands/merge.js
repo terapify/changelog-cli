@@ -23,16 +23,14 @@ export async function handler ({
 
     const hiddenFolder = resolve(path, '.changelog')
     const versionedFiles = fs.readdirSync(hiddenFolder)
-    console.log(versionedFiles)
+    info('Found files: ', versionedFiles)
     let changes = []
 
     for(const file of versionedFiles){
       const dir = resolve(hiddenFolder, file)
       const path = await toVFile.read(dir)
       const tree = getMarkdownRelease(path, { version: 'unreleased' }, stdout = false)
-      console.log(tree)
       tree.children.map(action=>{
-        console.log(action)
         action.children[0].children[0].children.map(e=>changes.push({action: action.name.toLowerCase(), value:e.value}))
       })
       fs.unlinkSync(dir)
