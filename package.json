@@ -1,8 +1,8 @@
 {
-  "name": "@geut/chan",
+  "name": "@chrisft25/chan",
   "version": "2.0.0",
-  "description": "Chan monorepo",
-  "private": true,
+  "description": "Chan forked",
+  "private": false,
   "workspaces": {
     "packages": [
       "packages/*"
@@ -21,22 +21,21 @@
   },
   "keywords": [
     "cli",
-    "geut",
     "tooling",
     "changelog",
     "keepachangelog"
   ],
-  "homepage": "http://geutstudio.com",
+  "homepage": "https://github.com/chrisft25/chan.git",
   "author": {
-    "name": "GEUT",
-    "email": "contact@geutstudio.com"
+    "name": "Chris",
+    "email": "hello@chrisfuentes.me"
   },
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/geut/chan.git"
+    "url": "https://github.com/chrisft25/chan.git"
   },
   "bugs": {
-    "url": "https://github.com/geut/chan/issues"
+    "url": "https://github.com/chrisft25/chan/issues"
   }
 }

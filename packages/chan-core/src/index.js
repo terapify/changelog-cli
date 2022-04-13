@@ -32,7 +32,7 @@ export async function addRelease (from, opts) {
     .process(from)
 }
 
-export function getMarkdownRelease (from, { version }) {
+export function getMarkdownRelease (from, { version }, stdout = true) {
   const processor = unified()
     .use(markdown)
     .use(remarkToChan)
@@ -40,5 +40,6 @@ export function getMarkdownRelease (from, { version }) {
 
   const chanTree = processor.runSync(processor.parse(from))
   const release = select(`release[identifier=${version}]`, chanTree)
+  if(!stdout) return release
   return processor.stringify({ type: 'root', children: [release] }, from)
 }

@@ -1,11 +1,16 @@
 import toVFile from 'to-vfile'
 import { resolve } from 'path'
+import fs from 'fs'
 
 import { addChanges } from '@geut/chan-core'
 
 import { createLogger } from '../logger.js'
 import { openInEditor } from '../open-in-editor.js'
 import { write } from '../vfs.js'
+
+import { getBranch } from './utils/git.js'
+
+import { handler as createChangelog } from './init.js'
 
 const actions = [
   { command: 'added', description: 'Added for new features' },
@@ -27,14 +32,30 @@ const builder = {
     alias: 'g',
     describe: 'Prefix change with [<group>]. This allows to group changes on release time.',
     type: 'string'
+  },
+  versioning: {
+    alias: 'v',
+    describe: 'Boolean to set if entries should be versioned according to the branch',
+    type: 'boolean',
+    default: false
   }
 }
 
-const createHandler = action => async ({ message, path, group, verbose, stdout }) => {
+const createHandler = action => async ({ message, path, group, verbose, versioning, stdout }) => {
   const { report, success, info } = createLogger({ scope: action, verbose, stdout })
 
   try {
-    const file = await toVFile.read(resolve(path, 'CHANGELOG.md'))
+    let fileName = 'CHANGELOG'
+
+    if(versioning){
+      path = resolve(path, '.changelog')
+      if(!fs.existsSync(path)) fs.mkdirSync(path)
+      fileName = (await getBranch()).replace(/\//g, '-')
+      await createChangelog({dir: path, fileName})
+    }
+
+    const file = await toVFile.read(resolve(path, `${fileName}.md`))
+
     if (!message) {
       message = await openInEditor()
 

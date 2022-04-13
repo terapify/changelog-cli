@@ -3,11 +3,13 @@ import * as ghRelease from './gh-release.js'
 import * as init from './init.js'
 import * as release from './release.js'
 import * as show from './show.js'
+import * as merge from './merge.js'
 
 export const commands = [
   init,
   ...actionCommands,
   release,
   ghRelease,
-  show
+  show,
+  merge
 ]

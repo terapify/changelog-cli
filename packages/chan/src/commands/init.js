@@ -23,11 +23,11 @@ export const builder = {
   }
 }
 
-export async function handler ({ dir, overwrite, verbose, stdout }) {
+export async function handler ({ dir, overwrite, verbose, fileName='CHANGELOG', stdout }) {
   const { report, success, info } = createLogger({ scope: 'init', verbose, stdout })
 
   try {
-    const file = await read(resolve(dir, 'CHANGELOG.md'))
+    const file = await read(resolve(dir, `${fileName}.md`))
 
     await initialize(file, { overwrite: overwrite || stdout })
 
@@ -38,7 +38,7 @@ export async function handler ({ dir, overwrite, verbose, stdout }) {
     return report(err)
   }
 
-  success('CHANGELOG.md created.')
+  success(`${fileName}.md created.`)
 
   try {
     await fs.access(resolve(dir, 'package.json'))
