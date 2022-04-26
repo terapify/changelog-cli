@@ -6,7 +6,7 @@ import open from 'open'
 import { getOctokit } from '@actions/github'
 
 import { gitUrlParse } from '@geut/git-url-parse'
-import { getMarkdownRelease } from '@chrisft25/chan-core'
+import { getMarkdownRelease } from '@terapify/chan-core'
 
 import { createLogger } from '../logger.js'
 

@@ -9,14 +9,14 @@ Since v3.0 this module is ESM only.
 ## Install
 
 ```sh
-npm install @chrisft25/chan-core
+npm install @terapify/chan-core
 ```
 
 ## Use
 
 ```js
 import toVFile from 'to-vfile'
-import { initialize, addChanges, addRelease, getMarkdownRelease } from '@chrisft25/chan-core'
+import { initialize, addChanges, addRelease, getMarkdownRelease } from '@terapify/chan-core'
 
 const file = toVFile.readSync('CHANGELOG.md')
 

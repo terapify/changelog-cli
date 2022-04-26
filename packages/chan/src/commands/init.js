@@ -2,7 +2,7 @@ import { resolve } from 'path'
 import boxen from 'boxen'
 import { promises as fs } from 'fs'
 
-import { initialize } from '@chrisft25/chan-core'
+import { initialize } from '@terapify/chan-core'
 
 import { createLogger } from '../logger.js'
 import { read, write } from '../vfs.js'

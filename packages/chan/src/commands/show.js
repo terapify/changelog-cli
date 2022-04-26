@@ -2,7 +2,7 @@ import { resolve } from 'path'
 import toVFile from 'to-vfile'
 import semver from 'semver'
 
-import { getMarkdownRelease } from '@chrisft25/chan-core'
+import { getMarkdownRelease } from '@terapify/chan-core'
 
 import { createLogger } from '../logger.js'
 

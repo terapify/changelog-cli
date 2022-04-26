@@ -3,7 +3,7 @@ import { resolve } from 'path'
 import toVFile from 'to-vfile'
 import fs from 'fs'
 
-import { getMarkdownRelease, addChanges } from '@chrisft25/chan-core'
+import { getMarkdownRelease, addChanges } from '@terapify/chan-core'
 import { createLogger, hasWarnings } from '../logger.js'
 import { write } from '../vfs.js'
 
