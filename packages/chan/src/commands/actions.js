@@ -37,7 +37,7 @@ const builder = {
     alias: 'v',
     describe: 'Boolean to set if entries should be versioned according to the branch',
     type: 'boolean',
-    default: false
+    default: true
   }
 }
 

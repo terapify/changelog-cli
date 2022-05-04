@@ -1,6 +1,6 @@
 {
   "name": "@terapify/chan-core",
-  "version": "3.2.6",
+  "version": "3.2.7",
   "description": "API and transformers to work with chast",
   "type": "module",
   "module": "./src/index.js",
@@ -12,23 +12,23 @@
     "lint": "standard \"**/*.js\""
   },
   "dependencies": {
-    "@geut/chan-stringify": "^3.2.6",
-    "@geut/chast": "^3.2.6",
-    "@geut/remark-chan": "^3.2.6",
-    "remark-parse": "^9.0.0",
-    "semver": "^7.3.5",
-    "unified": "^9.2.1",
-    "unist-util-remove-position": "^4.0.0",
-    "unist-util-select": "^4.0.0"
+    "@geut/chan-stringify": "3.2.6",
+    "@geut/chast": "3.2.6",
+    "@geut/remark-chan": "3.2.6",
+    "remark-parse": "9.0.0",
+    "semver": "7.3.5",
+    "unified": "9.2.1",
+    "unist-util-remove-position": "4.0.0",
+    "unist-util-select": "4.0.0"
   },
   "devDependencies": {
-    "cross-env": "^7.0.3",
-    "dirname-filename-esm": "^1.1.1",
-    "jest": "^27.0.0",
-    "jest-date-mock": "^1.0.7",
-    "standard": "^16.0.3",
-    "to-vfile": "^6.1.0",
-    "vfile-reporter": "^7.0.0"
+    "cross-env": "7.0.3",
+    "dirname-filename-esm": "1.1.1",
+    "jest": "27.0.0",
+    "jest-date-mock": "1.0.7",
+    "standard": "16.0.3",
+    "to-vfile": "6.1.0",
+    "vfile-reporter": "7.0.0"
   },
   "jest": {
     "resolver": "<rootDir>/../../jest-module-resolver.js",

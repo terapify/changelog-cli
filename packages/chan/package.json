@@ -1,6 +1,6 @@
 {
   "name": "@terapify/changelog-cli",
-  "version": "3.3.1",
+  "version": "3.3.2",
   "description": "Write and maintain a CHANGELOG from your command line.",
   "homepage": "http://geutstudio.com",
   "type": "module",
@@ -15,25 +15,25 @@
     "lint": "standard \"**/*.js\""
   },
   "dependencies": {
-    "@actions/github": "^5.0.0",
-    "@terapify/chan-core": "^3.2.6",
-    "@geut/git-url-parse": "^3.2.6",
-    "boxen": "^5.0.1",
-    "editor": "^1.0.0",
-    "find-up": "^5.0.0",
-    "new-github-release-url": "^1.0.0",
-    "open": "^8.2.0",
-    "semver": "^7.3.5",
-    "signale": "^1.4.0",
-    "tempfile": "^4.0.0",
-    "to-vfile": "^6.1.0",
-    "yargs": "^17.0.1"
+    "@actions/github": "5.0.0",
+    "@terapify/chan-core": "3.2.7",
+    "@geut/git-url-parse": "3.2.6",
+    "boxen": "5.0.1",
+    "editor": "1.0.0",
+    "find-up": "5.0.0",
+    "new-github-release-url": "1.0.0",
+    "open": "8.2.0",
+    "semver": "7.3.5",
+    "signale": "1.4.0",
+    "tempfile": "4.0.0",
+    "to-vfile": "6.1.0",
+    "yargs": "17.0.1"
   },
   "devDependencies": {
-    "cross-env": "^7.0.3",
-    "dirname-filename-esm": "^1.1.1",
-    "jest": "^27.0.0",
-    "standard": "^16.0.3"
+    "cross-env": "7.0.3",
+    "dirname-filename-esm": "1.1.1",
+    "jest": "27.0.0",
+    "standard": "16.0.3"
   },
   "jest": {
     "resolver": "<rootDir>/../../jest-module-resolver.js",
