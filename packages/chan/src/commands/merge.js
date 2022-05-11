@@ -35,7 +35,19 @@ export async function handler ({
       tree.children.map(action=>{
         const details = action.children
         details.map(detail=>{
-          detail.children.map(e=>changes.push({action: action.name.toLowerCase(), value: e.children[0].value}))
+          detail.children.map(e=>changes.push({action: action.name.toLowerCase(), value: e.children.reduce((accum, data)=>{
+            switch(data.type){
+              case 'text':
+                return accum+=data.value
+                break
+              case 'inlineCode':
+                return accum+=`\`${data.value}\``
+                break
+              case 'link':
+                return accum+=`[${data.children[0].value}](${data.url})`
+                break
+            }
+          },'')}))
         })
       })
       fs.unlinkSync(dir)
